@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIF Button</title>
+    <style>
+        body {
+    background-color: #fce4ec; /* Ніжно рожевий колір тла */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+#result {
+    margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="gifButton">
+            <img src="../img/heart.gif" alt="Initial GIF">
+        </button>
+        <div id="result" style="display:none;">
+            <img src="../img/3.gif" alt="New GIF">
+            <p>This is the text that appears after clicking the button.</p>
+        </div>
+    </div>
+    <script>
+const gifButton = document.getElementById('gifButton');
+const resultDiv = document.getElementById('result');
+
+gifButton.addEventListener('click', function() {
+    gifButton.style.display = 'none';
+    resultDiv.style.display = 'block';
+});
+    </script>
+</body>
+</html>
