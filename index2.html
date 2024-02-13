@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Валентинка</title>
+    <link rel="icon" href="../img/ico.ico" type="image/x-icon">
+    <style>
+        body {
+            background-color: #fdfdfd; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .conteiner{
+            text-align: center;
+        }
+
+        button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+#result {
+    margin-top: 20px;
+}
+p{
+    
+          color:palevioletred;
+          font-family: Comic Sans MS, Comic Sans, cursive;
+}
+          </style>
+</head>
+<body>
+
+    <div class="container">
+        <button id="gifButton">
+            <img src="../img/heart.gif" alt="Initial GIF">
+        </button>
+        <div id="result" style="display:none;">
+            <img src="../img/3.gif" alt="New GIF">
+            <p>До біса цей день Валентина! Я люблю тебе кожного дня💗</p>
+        </div>
+    </div>
+
+    <script>
+      const gifButton = document.getElementById('gifButton');
+const resultDiv = document.getElementById('result');
+
+gifButton.addEventListener('click', function() {
+    gifButton.style.display = 'none';
+    resultDiv.style.display = 'block';
+});
+    </script>
+
+</body>
+</html>
